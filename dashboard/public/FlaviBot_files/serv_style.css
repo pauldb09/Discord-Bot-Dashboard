@@ -1,0 +1,225 @@
+.page {
+    display: flex
+}
+
+#sidebar {
+    min-height: calc(100vh - 48px);
+    width: 230px;
+    transition: .2s;
+    background: #333
+}
+
+#sidebar.collapse {
+    width: 50px
+}
+
+.sidebar_svg {
+    vertical-align: middle;
+    color: #fff;
+    color: rgba(255, 255, 255, var(--text-opacity));
+    padding: 1rem;
+    opacity: .25;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    background-color: #2d3748;
+    background-color: rgba(45, 55, 72, var(--bg-opacity))
+}
+
+.sidebar_svg:hover {
+    cursor: pointer
+}
+
+.svg_sidebar {
+    z-index: 999;
+    display: block
+}
+
+.buttons_sidebar {
+    margin-bottom: 1.5rem
+}
+
+#go_to_dashboard_server {
+    background-color: #2d3748;
+    background-color: rgba(27, 124, 234, .2);
+    border-left-width: 4px;
+    border-color: #fff;
+    border-color: rgba(27, 88, 34);
+    color: #fff;
+    color: rgba(255, 255, 255, var(--text-opacity));
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    cursor: pointer;
+    text-decoration: none
+}
+
+#go_to_dashboard_server.active {
+    border-left-width: 2px
+}
+
+#go_to_dashboard {
+    color: #fff;
+    color: rgba(255, 255, 255, var(--text-opacity));
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    cursor: pointer;
+    text-decoration: inherit;
+    transition: all .3s
+}
+
+#go_to_dashboard:hover {
+    background-color: #2d3748;
+    background-color: rgba(45, 55, 72, var(--bg-opacity));
+    transition: all .3s
+}
+
+.guilds_page {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.break-all {
+    word-break: break-all
+}
+
+.choose_g {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1px
+}
+
+.server-list {
+    margin-top: 1rem
+}
+
+.server_card {
+    background-color: rgba(95, 154, 100);
+    border: solid 1px #38763E;
+    border-radius: .4em;
+    margin-top: .85rem;
+    box-shadow: 0 1px 3px 0 rgba(65, 187, 78), 0 3px 2px 0 rgba(0, 0, 0, .6);
+    transition: all .3s;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    justify-content: space-between;
+    display: flex
+}
+
+.config_guild {
+    padding: 0;
+    height: 50px;
+    align-self: center;
+    width: 200px;
+    border-radius: .4em;
+    transition: all .2s;
+    color: #fff;
+    color: rgba(255, 255, 255, var(--text-opacity));
+    padding: .5rem;
+    border-radius: .25rem;
+    background-color: #5843bd;
+    background-color: rgba(88, 67, 189, var(--bg-opacity));
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0
+}
+
+.config_guild:hover {
+    border-radius: .6em;
+    transition: all .2s
+}
+
+.invite_guild {
+    padding: 0;
+    height: 50px;
+    align-self: center;
+    width: 150px;
+    transition: all .2s;
+    width: 8.1rem;
+    color: #fff;
+    color: rgba(255, 255, 255, var(--text-opacity));
+    padding: .5rem;
+    border-radius: .25rem;
+    background-color: #8569e7;
+    background-color: rgba(133, 105, 231, var(--bg-opacity));
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0
+}
+
+.invite_guild:hover {
+    border-radius: .6em;
+    transition: all .2s
+}
+
+.name_with_img_guild {
+    padding: .5rem;
+    align-items: center;
+    display: flex
+}
+
+.name_with_img_guild img {
+    border-radius: 10px;
+    width: 3em;
+    height: 3em;
+    transition: all .2s;
+    max-width: 100%;
+    display: block
+}
+
+.name_with_img_guild p {
+    margin-left: .5rem;
+    color: #fff
+}
+
+.name_with_img_guild img:hover {
+    border-radius: 12.5px;
+    transition: all .2s
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0
+}
+
+@media(max-width:780px) {
+    .guilds_page {
+        padding-left: 40px;
+        padding-right: 40px
+    }
+}
+
+@media(max-width:740px) {
+    .guilds_page {
+        padding-left: 5px;
+        padding-right: 5px
+    }
+}
+
+@media(max-width:600px) {
+    .guilds_page {
+        width: 80%
+    }
+}
+
+@media(max-width:550px) {
+    #sidebar {
+        width: auto
+    }
+    .guilds_page {
+        width: 60%;
+        display: flex
+    }
+}

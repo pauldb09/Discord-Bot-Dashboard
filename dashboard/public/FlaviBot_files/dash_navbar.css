@@ -1,0 +1,108 @@
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--color-background-violet);
+    background-color: rgba(27, 88, 34);
+    padding: .1em 6rem
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff
+}
+
+#nav li {
+    display: inline
+}
+
+#nav li a {
+    text-decoration: none;
+    margin-right: 1.5em;
+    margin-top: 1rem;
+    opacity: .75;
+    color: #fff;
+    font-size: .875rem;
+    transition: all .2s
+}
+
+#nav li a:hover {
+    opacity: 1
+}
+
+#hamburger {
+    display: none
+}
+
+.buttons {
+    display: flex;
+    justify-content: end
+}
+
+#nav_connexion {
+    margin-left: auto
+}
+
+#nav_connexion li {
+    display: inline
+}
+
+.goto_dash {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px
+}
+
+.button_cnt {
+    color: #fff;
+    text-decoration: none;
+    padding: .5em 1em;
+    border: solid 1px #fff;
+    font-size: .875rem;
+    border-radius: .25em
+}
+
+.button_cnt:hover {
+    color: #38b2ac;
+    background-color: #fff
+}
+
+@media screen AND (max-width:986px) AND (min-width:200px) {
+    #nav {
+        display: none
+    }
+    .navigation {
+        padding-left: 10px;
+        padding-right: 10px
+    }
+    #hamburger {
+        display: block;
+        margin-left: 10px
+    }
+    #hamburger button {
+        color: rgba(255, 255, 255, var(--text-opacity));
+        padding-left: .75rem;
+        padding-right: .75rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        opacity: .75;
+        align-items: center;
+        display: flex;
+        border-width: 1px;
+        border-radius: .25rem;
+        border-color: #fff;
+        border-color: rgba(255, 255, 255, var(--border-opacity));
+        background-color: transparent;
+        background-image: none
+    }
+    #hamburger button:hover {
+        cursor: pointer;
+        opacity: 1
+    }
+    #hamburger button svg {
+        width: .75rem;
+        fill: currentColor;
+        height: .75rem;
+        z-index: 999
+    }
+}

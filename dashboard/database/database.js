@@ -1,0 +1,2 @@
+const mongoose = require('mongoose');
+module.exports = mongoose.connect('mongodb+srv://pauldb09:jamesb001@daltie.ifwuu.mongodb.net/daltie?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });

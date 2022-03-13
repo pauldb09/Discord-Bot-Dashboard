@@ -1,0 +1,9 @@
+.footer {
+    background-color: rgba(27, 88, 34);
+    padding: 1.5rem;
+    color: #fff
+}
+
+.footer footer p {
+    text-align: center
+}

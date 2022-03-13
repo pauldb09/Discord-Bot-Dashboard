@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Green-bot</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/89e6528a6f.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="<%= bot.displayAvatarURL %>" />
+
+    <!-- Référencement -->
+    <meta name="theme-color" content="#3A871F" />
+    <meta name="title" content="Green-Bot" />
+    <meta name="description" content="Green-Bot" />
+    <meta name="keywords" content="green-bot,bot,discord,bot discord" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Green-Bot" />
+    <meta property="og:url" content="http://green-bot.xyz" />
+    <meta property="og:description" content="Green-bot est un bot multifonctions français. Il est également open source !" />
+    <meta property="og:image" content="<%= bot.displayAvatarURL %>">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" value="summary" />
+    <meta name="twitter:title" content="Green-Bot" />
+    <meta name="twitter:description" content="Green-bot est un bot multifonctions français. Il est également open source !" />
+    <meta name="twitter:image" content="<%= bot.displayAvatarURL %>" />
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="<%= bot.displayAvatarURL %>"></a>
+        <nav class="nav" id="myTopnav">
+            <li><a href="/discord" class="nav-btn">Support</a></li>
+            <li><a href="/invite" class="nav-btn">Inviter</a></li>
+            <li><a href="https://guide.green-bot.xyz" class="nav-btn">Documentation</a></li>
+
+            <% if(is_logged) {%>
+                <img class="pp-user" src="<%=UserAvatar%>">
+                <p style="font-size: 17px; color: #fff;">
+                    <%= (is_logged ? `${user.username}#${user.discriminator}` : 'Se connecter') %>
+                </p>
+                <li><a href="/logout" class="logout">Log out</a></li>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <%}%>
+                    <% if(is_logged == false) {%>
+                        <li><a href="/auth/login" class="login">Connexion</a></li>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <%}%>
+
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img class="pp-green" src="<%= bot.displayAvatarURL %>g">
+    <h2 class="h2-green" style="color: #3A871F;">Green-bot</h2>
+    <br>
+    <p class="p-green">Green-bot est un bot pour discord multifonction facile à utiliser et à configurer. Il offre plus de 12 catégories de commandes et un dashboard web interactif !</p>
+    <div class="div-btn">
+        <a href="/invite" class="btn"><i class="fa fa-plus" aria-hidden="true"></i> Ajoutez moi</a>
+        <a href="<%= (is_logged ? `/profile` : 'auth/login') %>" class="btn"><i class="fa fa-sign-in" aria-hidden="true"></i>    <%= (is_logged ? `Mes serveurs` : 'Me connecter !') %></a>
+    </div>
+    <section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320">
+          <path fill="#1b1b1b" fill-opacity="1" d="M0,128L40,117.3C80,107,160,85,240,80C320,75,400,85,480,117.3C560,149,640,203,720,240C800,277,880,299,960,288C1040,277,1120,235,1200,224C1280,213,1360,235,1400,245.3L1440,256L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+        </svg>
+        <div class="container text-white">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5">
+                        <img class="img-fluid" src="https://cdn.discordapp.com/attachments/795737641559523328/825731409682628658/unknown.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h3 class="display-5">Messages de Bienvenue et de Départ</h3>
+                        <p>Green-Bot enverra de magnifiques messages à chaque fois qu'un nouveau membre rejoint ou quitte votre serveur ! Le message est entierement personnalisable !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-white">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <img class="img-fluid" src="https://cdn.discordapp.com/attachments/795737641559523328/825731547532886036/unknown.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5">
+                        <h3 class="display-5">Niveaux</h3>
+                        <p>Green-Bot possède un système de niveaux multi serveurs ! Une y a aussi une rank carde 100% personnalisable ! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "nav") {
+            x.className += " responsive";
+        } else if (x.className === "responsive") {
+            x.className -= "responsive"
+        } else {
+            x.className = "nav";
+        }
+    }
+</script>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Karla', sans-serif !important;
+        background: #1b1b1b;
+    }
+    
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 8px;
+    }
+    
+    nav.nav {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        width: 1200px;
+        margin-left: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .nav-btn {
+        font-size: 20px;
+        background: none;
+        border: none;
+        border-radius: 6px;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        color: #fff;
+        letter-spacing: 2px;
+        text-decoration: none;
+        overflow: hidden;
+    }
+    
+    .nav-btn:hover {
+        border-radius: 6px;
+        background: #3A871F;
+        box-shadow: 0 0 5px #3A871F, 0 0 10px #3A871F, 0 0 20px #3A871F;
+        transition: 0.5s;
+    }
+    
+    .pp-user {
+        margin-left: 250px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+    
+    .logout {
+        margin-left: 20px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        border-radius: 6px;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        color: #a34444;
+        ;
+        letter-spacing: 2px;
+        text-decoration: none;
+        overflow: hidden;
+    }
+    
+    .logout:hover {
+        border-radius: 6px;
+        background: #a34444;
+        box-shadow: 0 0 5px #a34444, 0 0 10px #a34444, 0 0 20px #a34444;
+        color: #1b1b1b;
+        transition: 0.5s;
+    }
+    
+    .login {
+        margin-left: 20px;
+        font-size: 20px;
+        background: none;
+        border: none;
+        border-radius: 6px;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        color: #36c449;
+        ;
+        letter-spacing: 2px;
+        text-decoration: none;
+        overflow: hidden;
+    }
+    
+    .login:hover {
+        border-radius: 6px;
+        background: #4bb674;
+        box-shadow: 0 0 5px #159c37, 0 0 10px #159c37, 0 0 20px #159c37;
+        color: #1b1b1b;
+        transition: 0.5s;
+    }
+    
+    .pp-green {
+        display: flex;
+        margin: 0 auto;
+        position: relative;
+        width: auto;
+    }
+    
+    .h2-green {
+        text-align: center;
+        font-size: 60px;
+    }
+    
+    .p-green {
+        margin: 0 200px 50px 200px;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+    }
+    
+    .btn {
+        display: inline-block;
+        font-size: 20px;
+        background: none;
+        border: none;
+        border-radius: 6px;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        color: #fff;
+        letter-spacing: 2px;
+        text-decoration: none;
+        overflow: hidden;
+    }
+    
+    .btn:hover {
+        color: #3A871F;
+    }
+    
+    .div-btn {
+        display: flex;
+        justify-content: center;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 10px;
+        background: #3A871F;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        width: 10px;
+        background: #70db6c;
+    }
+    
+    section {
+        background: #3A871F;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .container {
+        background: #3A871F;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .align-items-center {
+        align-items: center !important;
+    }
+    
+    .order-lg-2 {
+        order: 2!important;
+    }
+    
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    
+    .p-5 {
+        padding: 3rem!important;
+    }
+    
+    .text-white {
+        color: #fff;
+    }
+    
+    .display-5 {
+        font-size: 45px;
+        font-weight: 200;
+        line-height: 1;
+    }
+    
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .order-lg-1 {
+        order: 1!important;
+    }
+    
+    [data-v-c0f438f4] {
+        background: #1b1b1b;
+        margin: 0;
+        line-height: 0;
+    }
+    
+    .icon {
+        display: none;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .icon {
+            margin-top: 30px;
+            color: #fff;
+            display: block;
+        }
+        .p-green {
+            text-align: center;
+            margin: 0 auto;
+        }
+        .h2-green {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+</style>
+
+</html>

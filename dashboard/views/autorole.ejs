@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Green-bot -
+        <%= guild.name %>
+    </title>
+
+    <meta property="og:description" content="Green-bot est un bot Discord français Multis fonctions.">
+    <meta name="twitter:image" content="<%= bot.displayAvatarURL() %>">
+    <meta name="twitter:image" content="<%= bot.displayAvatarURL() %>">
+    <meta name="author" content="Pauldb09">
+    <meta name="description" content="Green-bot est un bot Discord français Multis fonctions.">
+    <meta property="og:type" content="website">
+    <meta property=og:image content="https://cdn.discordapp.com/avatars/783708073390112830/f4aabacb3667ba1831d3ca5f7b2e486d.webp?size=512">
+    <meta name="theme-color" content="#3A871F">
+    <meta property="og:site_name" content="Créez le meilleur serveur Discord">
+    <meta property="og:title" content="Green-bot">
+    <meta property="og:image" content="<%= bot.displayAvatarURL() %>">
+    <link rel="shortcut icon" type="image/x-icon" href="<%= bot.displayAvatarURL() %>">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="/css/cssdash.css" rel="stylesheet">
+</head>
+<%
+const pp = UserAvatar;
+%>
+
+    <body style="background-color: #2f313e;">
+        <div class="main">
+            <div class="dashboard">
+                <span class="guildlist">
+                    <div class="bot-list">
+                    <div id="783708073390112830" class="item">
+                        <a href="/profile">
+            <div class="bot-item tts:right" aria-label="  Profile">
+                <img class="icon-bot" data-id="783708073390112830" src="<%= pp %>" width="70px" height="70px">
+            </div>
+        </a>
+    </div>
+                    <hr class="bot-hr">
+              
+                <% guilds.forEach((guild) => { %>
+                    <% if (guild.icon) { %>
+                        <div id="783708073390112830" class="item">
+                            <a href="/server/<%= guild.id %>">
+                <div class="bot-item tts:right" aria-label="  <%= guild.name %>">
+                    <img class="icon-bot" data-id="783708073390112830" src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png?size=2048" width="70px" height="70px">
+                </div>
+            </a>
+        </div>
+                        <% } else { %>
+
+                            <div id="783708073390112830" class="item">
+                                <a href="/server/<%= guild.id %>">
+                    <div class="bot-item tts:right" aria-label="  <%= guild.name %>">
+                        <canvas class="icon-bot" id="<%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '') %>" width="70px" height="70px"></canvas>
+                        <script>
+                          function createIcone() {
+                            const nameAcronym = document.getElementById("<%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '')  %>").getContext('2d');
+                            nameAcronym.font = '30px Arial';
+                            nameAcronym.textAlign = "center";
+                            nameAcronym.fillStyle = "white";
+                            nameAcronym.fillText("<%= guild.name.replace(/\w+/g, name => name[0]).replace(/\s/g, '')  %>", 35, 45);
+                          };
+                          createIcone();
+                        </script>
+                    </div>
+                </a>
+            </div>
+
+                           
+                            <%}%>
+
+                                <%});%>
+                
+  
+
+                                <div class="item-leave">
+                                    <div style="width: max-content;margin-left: auto;margin-right: auto;">
+                                        <a href="/">
+                                           </a></div></div></div></span>
+                <span class="leftmenu">
+                    <div class="menu">
+                        <div class="nav-guild">
+                        <div class="forms-guild">
+                            <% if (guild.icon) { %>
+                                <img src="https://cdn.discordapp.com/icons/<%=guild.id%>/<%=guild.icon%>.png?size=128"    >
+                            <% } else { %>
+                                     <img src="https://cdn.discordapp.com/attachments/748897191879245834/782271474450825226/0.png?size=128"  >
+                
+                                <% } %>
+                          <h4><%= guild.name %><br><br><%= guild.memberCount %> members</h4>
+                        </div>
+                      </div>
+                <style>
+                    .leftmenu {
+                        background-color: #2f3136 !important;
+                    }
+                </style>
+                <div class="menu-btn">
+                    <a href="/server/<%=guild.id%>">
+                        <div class="btn-item ">
+                           <span class="item-span">General</span></div>
+            </a>
+            <a href="/server/<%=guild.id%>/welcome">
+                <div class="btn-item ">
+                    <span class="item-span">Welcome message</span></div>
+            </a>
+            <a href="/server/<%=guild.id%>/leave">
+                <div class="btn-item">
+                    <span class="item-span">Leave messages</span></div>
+            </a>
+            <a href="/server/<%=guild.id%>/channels">
+                <div class="btn-item ">
+                    <span class="item-span">Specifics channels</span></div>
+            </a>
+
+
+
+
+
+
+            <a href="/server/<%=guild.id%>/autorole">
+                <div class="btn-item btn-item-active">
+                    <span class="item-span">Autorole</span></div>
+            </a>
+            <a href="/server/<%=guild.id%>/embed">
+                <div class="btn-item  ">
+                    <span class="item-span">Embed sender </span></div>
+            </a>
+            <a href="/server/<%=guild.id%>/moderation">
+                <div class="btn-item  ">
+                    <span class="item-span">Boost messages </span></div>
+            </a>
+
+
+            <a href="/server/<%=guild.id%>/ping">
+                <div class="btn-item  ">
+                    <span class="item-span">Auto ping </span>
+                </div>
+            </a>
+
+        </div>
+        </div>
+        </span>
+        <span class="rightmenu">
+<%
+
+
+let autorole;
+if (findData.autorole) {
+    autorole = guild.roles.find((c)=>c.id ===findData.autorole);
+} else {
+    autorole= null;
+}
+let autorolebot;
+if (findData.autorole_bot) {
+    autorolebot = guild.roles.find((c)=>c.id ===findData.autorole_bot);
+} else {
+    autorolebot= null;
+}
+
+
+%>
+    <div class="page-content">
+        <form role="form" id="formgen" action="/server/<%= guild.id %>/autorole" method="POST">
+
+         
+                <div class="input-field">
+                    <div class="labele" style="text-align: left;">
+                        <label style="margin-bottom: 5px;color: #b6bef1;">
+                            Humans autorole
+                        </label>
+                    </div>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;color: #72767d;font-size:.825rem;line-height:20px;">Every new member will automatically have this role</font>
+                    </font>
+                    <br>    <br>
+                    <div class="select-wrapper">
+
+                        <svg class="caret" height="7" viewBox="0 0 7 7" width="7" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10l5 5 5-5z"></path>
+                            <path d="M0 0h7v7H0z" fill="none"></path>
+                        </svg>
+                        <select name="autorole_CHANNELID" tabindex="-1">
+                            <% if(autorole != null) { %>
+                                <option value="<%= autorole.id %>" >@<%= autorole.name %></option>
+                                <option value="no">No set</option>
+                                <% guild.roles.filter(r=>r.name !== "@everyone" && r.name !== "@here" && !r.managed && r.id !== autorole.id && r.permissions !== 8).forEach(c => { %>
+                                <option value="<%= c.id %>" >#<%= c.name %></option>
+                                <% }); %>
+                                <% }else{ %>
+                 <option value="no">No set</option>
+                 <% guild.roles.filter(r=>r.name !== "@everyone" && r.name !== "@here" && !r.managed && r.permissions !== 8).forEach(c => { %>
+                 <option value="<%= c.id %>" >@<%= c.name %></option>
+                 <% }); %>
+                 <% }; %>
+
+                        </select>
+                    </div>
+
+                </div>
+                <div class="input-field">
+                    <div class="labele" style="text-align: left;">
+                        <label style="margin-bottom: 5px;color: #b6bef1;">
+                            Bot autorole
+                        </label>
+                    </div>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;color: #72767d;font-size:.825rem;line-height:20px;">Every new bot will automatically have this role</font>
+                    </font>
+                    <br>    <br>
+                    <div class="select-wrapper">
+
+                        <svg class="caret" height="7" viewBox="0 0 7 7" width="7" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10l5 5 5-5z"></path>
+                            <path d="M0 0h7v7H0z" fill="none"></path>
+                        </svg>
+                        <select name="autorolebot_CHANNELID" tabindex="-1">
+                            <% if(autorolebot != null) { %>
+                                <option value="<%= autorolebot.id %>" >@<%= autorolebot.name %></option>
+                                <option value="no">No set</option>
+                                <% guild.roles.filter(r=>r.name !== "@everyone" && r.name !== "@here" && !r.managed && r.id !== autorolebot.id && r.permissions !== 8).forEach(c => { %>
+                                <option value="<%= c.id %>" >@<%= c.name %></option>
+                                <% }); %>
+                                <% }else{ %>
+                                    <option value="no">No set</option>
+                                    <% guild.roles.filter(r=>r.name !== "@everyone" && r.name !== "@here" && !r.managed && r.permissions !== 8).forEach(c => { %>
+                                    <option value="<%= c.id %>" >@<%= c.name %></option>
+                                    <% }); %>
+                                    <% }; %>
+                        </select>
+                    </div>
+
+                </div>
+                
+                                <button type="submit" class="btn" id="form_BUTTON"  onclick="send();">✅ Save changes </button>
+
+                </form>
+
+                </div>
+                </span>
+        </div>
+        </div>
+        <div style="display: none;" class="active-bot-here" id="783708073390112830"></div>
+        <script type="text/javascript">
+            function send() {
+                const alert = document.getElementById('pop');
+                alert.innerHTML = `<h2>Enregistré avec succès</h2>`;
+                alert.setAttribute('class', 'alert success');
+                document.getElementById('formgen').submit();
+                setTimeout(() => {
+
+                }, 3000)
+            }
+        </script>
+        <footer>
+
+            <script src="/dash/jquery-3.3.1.min.js" type="text/javascript"></script>
+            <script src="/dash/jquery.ba-throttle-debounce.min.js" type="text/javascript"></script>
+            <script src="/dash/materialize.min.js" type="text/javascript"></script>
+            <script src="/dash/notyf.min.js" type="text/javascript"></script>
+            <link rel="stylesheet" href="/dash/notyf.min.css">
+            <script>
+                $(document).ready(() => {
+                    $('select').formSelect();
+
+                    const sortSelect = $('#sortSelect');
+                    const orderSelect = $('#orderSelect');
+
+                    if (!sortSelect || !orderSelect) return;
+
+                    const selects = [sortSelect, orderSelect];
+
+                    selects.forEach(s => {
+                        s.change(() => {
+                            window.location = s.find('option:selected').val();
+                        });
+                    });
+                });
+            </script>
+        </footer>
+
+    </body>
+
+</html>

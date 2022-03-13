@@ -1,0 +1,34 @@
+<body>
+    <div id="pop">
+        <div class="column" style="color: #fff !important;">
+            <center>
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent aos-init aos-animate" data-aos="zoom-in-right">
+                        <article class="tile is-child box" style="background-color:#2f3136;color: #fff;">
+                            <p class="title" style="color: #fff !important;">Servers</p>
+                            <h1 class="title is-1" id="serveurs" style="color: #fff !important;">
+                                <%= guildsCount %>
+                            </h1>
+                        </article>
+                    </div>
+                    <div class="tile is-parent aos-init aos-animate" data-aos="zoom-in-up">
+                        <article class="tile is-child box" style="background-color:#2f3136;color: #fff;">
+                            <p class="title" style="color: #fff !important;">Users</p>
+                            <h1 class="title is-1" id="utilisateurs" style="color: #fff !important;">37882</h1>
+                        </article>
+                    </div>
+                    <div class="tile is-parent aos-init aos-animate" data-aos="zoom-in-left">
+                        <article class="tile is-child box" style="background-color:#2f3136;">
+                            <p class="title" style="color: #fff !important;">Channels</p>
+                            <h1 class="title is-2" id="channels" style="color: #fff !important;">3687</h1>
+                        </article>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </div>
+    <script>
+        const alert = document.getElementById('pop');
+        alert.innerHTML = `<%= text %>`;
+    </script>
+</body>
