@@ -4,7 +4,8 @@
 [![](https://www.codefactor.io/repository/github/pauldb09/Green-bot/badge)](https://www.codefactor.io/repository/pauldb09/Green-bot/)
 
 # Discord-Bot-Dashboard
-🚀 A powerfull dashboard for discord bot build in expressjs
+🚀 A powerfull dashboard for discord bot build in expressjs.
+If you need any help while installing it, join [this server](https://discord.gg/Wkbpa4y8JW) and you will be helped!
 
 
 # Setup
