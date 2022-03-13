@@ -7,10 +7,11 @@
 🚀 A powerfull dashboard for discord bot build in expressjs
 
 
-#Setup
+# Setup
 
 Install nodejs v16. and do npm i & node sharder.js
 
-#Dashboard
+# Dashboard
 
 <img src="https://cdn.discordapp.com/attachments/689090341516607509/952597036694372352/unknown.png">
+<img src="https://cdn.discordapp.com/attachments/689090341516607509/952597216340627586/unknown.png">
